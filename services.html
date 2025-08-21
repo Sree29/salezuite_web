@@ -10,8 +10,8 @@
   <meta name="author" content="Themeservices">
   <!-- Favicon Icon -->
   <link rel="icon" href="assets/img/logo.png" type="image/png">
-<!-- Site Title -->
-<title>Salezuite</title>
+  <!-- Site Title -->
+  <title>Salezuite</title>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/animate.css">
@@ -60,6 +60,20 @@
       color: green;
 
     }
+
+    .cs_sidebar {
+      width: 260px;
+      max-width: 80vw;
+      background-color: #002d1f !important;
+      padding: 2rem 1.5rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      overflow-y: auto;
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
   </style>
 </head>
 
@@ -71,32 +85,7 @@
     </div>
   </div>
   <!-- End Preloader -->
-<style>
-    .cs_preloader_in span {
-  width: 80px;
-  height: 80px;
-  border: 4px solid transparent; 
-  border-top-color: #089404;  /* green circle */
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-  animation: spin 1s linear infinite;
-}
 
-.cs_preloader_in span::before,
-.cs_preloader_in span::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: #fdd835; /* yellow dot */
-  border-radius: 50%;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-  </style>
   <!-- Start Header Section -->
   <header class="cs_site_header cs_style_1 cs_type_2 cs_sticky_header cs_white_color cs_heading_font"
     style="background-color: white; color: black;">
@@ -113,7 +102,7 @@
             <div class="cs_nav">
               <ul class="cs_nav_list">
                 <li>
-                  <a href="index.html" aria-label="Menu link" class="active"> Home</a>
+                  <a href="index.html" aria-label="Menu link"> Home</a>
                   <!-- <ul>
          
                       <li><a href="home-v2.html" aria-label="Menu link">Home V2</a></li>
@@ -121,8 +110,8 @@
                     </ul> -->
                 </li>
                 <li><a href="about-us.html" aria-label="Menu link">About Us</a></li>
-                <li >
-                  <a href="services.html" aria-label="Menu link">Services</a>
+                <li>
+                  <a href="services.html" aria-label="Menu link" class="active">Features</a>
                   <!-- <ul>
                       <li><a href="services.html" aria-label="Menu link">Services</a></li>
                       <li><a href="service-details.html" aria-label="Menu link">Service Details</a></li>
@@ -169,10 +158,10 @@
   <section class="cs_page_heading cs_bg_filed text-center cs_gray_bg_2 position-relative overflow-hidden"
     data-src="assets/img/page-heading-bg.svg">
     <div class="container">
-      <h1 class="cs_fs_64 cs_bold cs_mb_8">Our Services</h1>
+      <h1 class="cs_fs_64 cs_bold cs_mb_8">Our Features</h1>
       <ol class="breadcrumb cs_fs_18 cs_heading_font">
         <li class="breadcrumb-item"><a aria-label="Back to home page link" href="/">Home</a></li>
-        <li class="breadcrumb-item active">Services</li>
+        <li class="breadcrumb-item active">Features</li>
       </ol>
     </div>
   </section>
@@ -198,7 +187,8 @@
         <!-- Invoice Management -->
         <div class="cs_feature_item cs_white_bg cs_radius_20">
           <span class="cs_feature_icon cs_center cs_radius_12 cs_mb_15">
-            <img src="assets/img/invoice.png" alt="Invoice icon">
+            <img src="assets/img/invoice.png" alt="Invoice icon" style="width:40px; height:auto;">
+
           </span>
           <h3 class="cs_fs_24 cs_semibold cs_mb_6">
             Invoice Management
@@ -218,7 +208,7 @@
         <!-- Quotation Management -->
         <div class="cs_feature_item cs_white_bg cs_radius_20">
           <span class="cs_feature_icon cs_center cs_bg_1 cs_radius_12 cs_mb_15">
-            <img src="assets/img/quatation.png" alt="Quotation icon">
+            <img src="assets/img/quatation.png" alt="Quotation icon" style="width:40px; height:auto;">
           </span>
           <h3 class="cs_fs_24 cs_semibold cs_mb_6">
             <a href="service-details.html">Quotation & Estimates</a>
@@ -238,7 +228,7 @@
         <!-- Client Management -->
         <div class="cs_feature_item cs_white_bg cs_radius_20">
           <span class="cs_feature_icon cs_bg_2 cs_center cs_radius_12 cs_mb_15">
-            <img src="assets/img/client.png" alt="Client icon">
+            <img src="assets/img/client.png" alt="Client icon" style="width:40px; height:auto;">
           </span>
           <h3 class="cs_fs_24 cs_semibold cs_mb_6">
             <a href="service-details.html">Client Management</a>
@@ -259,7 +249,7 @@
         <!-- Print & Download -->
         <div class="cs_feature_item cs_white_bg cs_radius_20">
           <span class="cs_feature_icon cs_bg_4 cs_center cs_radius_12 cs_mb_15">
-            <img src="assets/img/printer.png" alt="Print icon">
+            <img src="assets/img/printer.png" alt="Print icon" style="width:40px; height:auto;">
           </span>
           <h3 class="cs_fs_24 cs_semibold cs_mb_6">
             <a href="service-details.html" aria-label="Service details link">Print & Download</a>
@@ -392,28 +382,205 @@
     }
   </style>
   <!-- End Features Section -->
+
+  <section class="scrolling-section" style="margin-bottom: 80px;">
+    <div class="scrolling-wrapper">
+      <img src="assets/img/img1.png" onclick="openPopup(0)">
+      <img src="assets/img/img2.png" onclick="openPopup(1)">
+      <img src="assets/img/img3.png" onclick="openPopup(2)">
+      <img src="assets/img/img4.png" onclick="openPopup(3)">
+
+      <!-- duplicate for infinite effect -->
+      <img src="assets/img/img1.png" onclick="openPopup(0)">
+      <img src="assets/img/img2.png" onclick="openPopup(1)">
+      <img src="assets/img/img3.png" onclick="openPopup(2)">
+      <img src="assets/img/img4.png" onclick="openPopup(3)">
+    </div>
+
+  </section>
+
+  <!-- Popup -->
+  <!-- Popup -->
+  <div id="imgPopup" class="popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <img class="popup-content" id="popupImg">
+
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+    <a class="next" onclick="changeImage(1)">&#10095;</a>
+  </div>
+
+  <style>
+    /* Scrolling images */
+    .scrolling-section {
+      overflow: hidden;
+      white-space: nowrap;
+      background: white;
+      padding: 20px 0;
+    }
+
+
+    .scrolling-wrapper {
+      display: flex;
+      gap: 20px;
+      animation: scroll 25s linear infinite;
+    }
+
+
+
+    .scrolling-wrapper img {
+      height: 300px;
+      margin: 0 20px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .scrolling-wrapper img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Popup Styles */
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      text-align: center;
+    }
+
+    .popup-content {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: #fff;
+      font-size: 40px;
+      cursor: pointer;
+    }
+
+    /* Arrows */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 16px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      user-select: none;
+      transition: 0.3s;
+    }
+
+    .prev:hover,
+    .next:hover {
+      color: #f1c40f;
+    }
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+
+    /* Keyframes for scrolling */
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+
+      /* shift left */
+    }
+  </style>
+
+  <script>
+    let currentIndex = 0;
+    const images = [
+      "assets/img/img1.png",
+      "assets/img/img2.png",
+      "assets/img/img3.png",
+      "assets/img/img4.png"
+    ];
+
+    function openPopup(index) {
+      currentIndex = index;
+      document.getElementById("imgPopup").style.display = "block";
+      document.getElementById("popupImg").src = images[currentIndex];
+    }
+
+    function closePopup() {
+      document.getElementById("imgPopup").style.display = "none";
+    }
+
+    function changeImage(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = images.length - 1;
+      if (currentIndex >= images.length) currentIndex = 0;
+      document.getElementById("popupImg").src = images[currentIndex];
+    }
+  </script>
+<style>
+  @media (max-width: 767px) {
+  /* Stack image and text vertically */
+  .cs_card .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Add spacing between image and text */
+  .cs_card_thumbnail {
+    margin-bottom: 20px;
+  }
+
+  /* Make text responsive */
+  .cs_card_content h2,
+  .cs_card_content p {
+    text-align: center; /* optional: center text on mobile */
+  }
+
+  /* Make image scale properly */
+  .cs_card_thumbnail img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+</style>
   <!-- Start Customization Section -->
   <section class="position-relative">
-    <div class="cs_height_120 cs_height_lg_80"></div>
+    <div class="cs_height_60 cs_height_lg_40"></div>
+
     <div class="container">
       <div class="cs_card cs_style_1 cs_type_3">
+
         <div class="row cs_gap_y_50 position-relative z-1">
           <div class="col-lg-6">
             <div class="cs_card_thumbnail position-relative">
               <img src="assets/img/img4.PNG" alt="Salezuite Dashboard">
             </div>
           </div>
-          <style>
-            .cs_card_thumbnail img {
-              width: 631px;
-              height: 461px;
-              object-fit: cover;
-              /* ensures it fills the dimensions without distortion */
-              display: block;
-            }
-          </style>
+
+
           <div class="col-lg-6">
             <div class="cs_card_content">
+
               <div class="cs_section_heading cs_style_1 cs_mb_27">
                 <div class="cs_section_subtitle cs_fs_18 cs_heading_color cs_mb_22">
                   <img src="assets/img/icons/star-1.svg" alt="Star icon">
@@ -421,7 +588,7 @@
                   <img src="assets/img/icons/star-1.svg" alt="Star icon">
                 </div>
                 <h2 class="cs_section_title cs_fs_48 cs_semibold">
-                  Streamline Your Billing and Quotations
+                  Simplify Your Billing
                 </h2>
                 <p class="cs_card_desc mb-0">
                   Salezuite makes it easy to create, customize, and manage invoices and quotations quickly and securely.
@@ -431,7 +598,8 @@
               <div class="cs_iconbox_wrapper_1">
                 <div class="cs_iconbox cs_style_1 cs_type_1">
                   <span class="cs_iconbox_icon cs_center cs_accent_bg">
-                    <img src="assets/img/edit-document.png" alt="Customizable Templates icon">
+                    <img src="assets/img/edit-document.png" alt="Customizable Templates icon"
+                      style="width:50px; height:auto;">
                   </span>
                   <div class="cs_iconbox_info">
                     <h3 class="cs_fs_20 cs_semibold cs_mb_1">Customizable Templates</h3>
@@ -444,7 +612,7 @@
 
                 <div class="cs_iconbox cs_style_1 cs_type_1">
                   <span class="cs_iconbox_icon cs_center cs_accent_bg">
-                    <img src="assets/img/file.png" alt="Download & Print icon">
+                    <img src="assets/img/file.png" alt="Download & Print icon" style="width:50px; height:auto;">
                   </span>
                   <div class="cs_iconbox_info">
                     <h3 class="cs_fs_20 cs_semibold cs_mb_1">Download & Print</h3>
@@ -462,97 +630,152 @@
   </section>
 
   <!-- End Customization Section -->
+
+
   <!-- Start Footer Section -->
-    <footer class="cs_footer cs_style_1 cs_type_2 cs_accent_bg cs_bg_filed" data-src="assets/img/footer-bg-3.svg">
-    <div class="cs_height_130 cs_height_lg_80"></div>
+  <footer class="cs_footer">
     <div class="container">
-      <div class="cs_footer_top position-relative">
-        <ul class="cs_location_list cs_mp_0">
-          <li>
-            <span class="cs_location_icon cs_center cs_heading_color cs_radius_100">
-              <i class="fa-solid fa-location-dot"></i></span>
-            <div class="cs_location_info cs_fs_18">
-              <!-- <p class="cs_fs_14 cs_theme_color_4 mb-0">ADDRESS</p> -->
-              <p class="cs_white_color mb-0">Powered by, <br> Cognetz</p>
-            </div>
-          </li>
-          <li>
-            <span class="cs_location_icon cs_center cs_heading_color cs_radius_100">
-              <i class="fa-solid fa-link"></i>
-            </span>
-            <div class="cs_location_info cs_fs_18">
-              <p class="cs_fs_14 cs_theme_color_4 mb-0">Quick Links</p>
-              <a href="index.html" aria-label="Home page link" class="cs_white_color d-block">Home</a>
-              <a href="about-us.html" aria-label="About page link" class="cs_white_color d-block">About Us</a>
-              <a href="services.html" aria-label="Services page link" class="cs_white_color d-block">Services</a>
-              <a href="blog.html" aria-label="Blog page link" class="cs_white_color d-block">Blog</a>
-              <a href="contact.html" aria-label="Contact page link" class="cs_white_color d-block">Contact Us</a>
-            </div>
-          </li>
+      <div class="cs_footer_row">
 
-          <li>
-            <span class="cs_location_icon cs_center cs_heading_color cs_radius_100">
-              <i class="fa-brands fa-facebook-f"></i>
-            </span>
-            <div class="cs_location_info cs_fs_18">
-              <p class="cs_fs_14 cs_theme_color_4 mb-0">FOLLOW US</p>
-              <a href="https://www.facebook.com/share/16Xh89U5kX/" aria-label="Facebook link"
-                class="cs_white_color d-block" target="_blank">
-                <i class="fa-brands fa-facebook-f"></i> Facebook
-              </a>
+        <!-- Section 1 -->
+        <div class="cs_footer_col">
+          <img src="assets/img/logo.png" alt="Logo" class="footer-logo" style="width:60px; height:auto;">
 
-
-              <a href="https://www.instagram.com/cognetz?igsh=MXkwMHoydjg3YzBrdg==" aria-label="Instagram link"
-                class="cs_white_color d-block" target="_blank">
-                <i class="fa-brands fa-instagram"></i> Instagram
-              </a>
-
-              <a href="https://in.linkedin.com/company/cognetzinternational" aria-label="LinkedIn link"
-                class="cs_white_color d-block" target="_blank">
-                <i class="fa-brands fa-linkedin"></i> LinkedIn
-              </a>
-
-            </div>
-          </li>
-
-        </ul>
-      </div>
-      <div class="cs_footer_main cs_radius_30">
-        <div class="cs_footer_desc">
-          <div class="cs_brand">
-            <img src="assets/img/logo2.png" alt="Logo" style="width: 150px; height: auto;">
-          </div>
-          <div class="cs_footer_desc_text">
-            Manage all your invoices and quotations with ease. Create, customize, download, and print professional
-            documents anytime, anywhere.
-          </div>
-
+          <p>Manage all your invoices and quotations with ease. Create, customize, download, and print professional
+            documents anytime, anywhere.</p>
         </div>
-        <!-- <div class="cs_footer_header cs_radius_30">
-          <ul class="cs_footer_menu cs_semibold cs_white_color cs_mp_0">
-            <li><a href="index.html" aria-label="Home page link">Home</a></li>
-            <li><a href="about-us.html" aria-label="About page link">About Us</a></li>
-            <li><a href="services.html" aria-label="Services page link">Services</a></li>
-          
-            <li><a href="blog.html" aria-label="Blog page link">Blog</a></li>
-            <li><a href="contact.html" aria-label="Contact page link">Contact Us</a></li>
+
+        <!-- Section 2 -->
+        <div class="cs_footer_col">
+          <h4>Powered By</h4>
+          <p>Cognetz</p>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="cs_footer_col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
-          <div class="cs_social_links cs_style_1 cs_heading_color">
-            <a href="#" aria-label="Social link"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" aria-label="Social link"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" aria-label="Social link"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="Social link"><i class="fa-brands fa-behance"></i></a>
-          </div>
-        </div> -->
-      </div>
-      <div class="cs_footer_bottom position-relative">
-        <div class="cs_footer_text cs_white_color text-center">
-          Copyright &copy; <span class="cs_getting_year"></span>
-          <a href="https://cognetz.com/" target="_blank" class="cs_white_color"
-            aria-label="Cognetz website link">Cognetz</a>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="cs_footer_col">
+          <h4>Follow Us</h4>
+          <ul class="social-links">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
         </div>
 
       </div>
+      <div class="cs_footer_bottom">
+        <p>Copyright © 2025 Cognetz</p>
+      </div>
+    </div>
+
+    <style>
+      .cs_footer {
+        background: #002d1f;
+        color: #fff;
+        padding: 70px 0 40px;
+        font-size: 14px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Footer Row - 4 equal sections */
+      .cs_footer_row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .cs_footer_col {
+        flex: 1 1 22%;
+        /* Each column takes equal width (~1/4) */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Center horizontally */
+        text-align: left;
+        /* Center text */
+      }
+
+      .cs_footer_col h4 {
+        font-size: 22px;
+        margin-bottom: 25px;
+        font-weight: bold;
+        color: #00ff84;
+      }
+
+      .cs_footer_col p,
+      .cs_footer_col ul {
+        font-size: 17px;
+        line-height: 1.7;
+      }
+
+      .cs_footer_col ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .cs_footer_col ul li {
+        margin-bottom: 12px;
+      }
+
+      .cs_footer_col ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 17px;
+        transition: color 0.3s;
+      }
+
+      .cs_footer_col ul li a:hover {
+        color: #00ff84;
+      }
+
+      .cs_footer_bottom {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 25px;
+        margin-top: 50px;
+        font-size: 15px;
+      }
+
+      /* Responsive Layouts */
+      @media (max-width: 992px) {
+        .cs_footer_col {
+          flex: 1 1 45%;
+          /* 2 columns per row */
+        }
+      }
+
+      @media (max-width: 600px) {
+        .cs_footer_col {
+          flex: 1 1 100%;
+          /* 1 column per row */
+        }
+      }
+
+      .footer-logo {
+        width: 90px;
+        height: auto;
+        margin-bottom: 15px;
+      }
+    </style>
   </footer>
   <!-- End Footer Section -->
   <!-- Start Scroll Up Button -->

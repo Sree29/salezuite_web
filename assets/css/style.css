@@ -47,10 +47,13 @@
   --black-color: #000;
   --heading-color: #1A1A2E;
   --body-color: #788094;
-  --accent-color: #013228;
+   
+  /* --accent-color: #013228; */
+    --accent-color: white;
   --border-color: #D8DDE1;
   --theme-color-1: #E3FFCD;
-  --theme-color-2: #7341F1;
+  /* --theme-color-2: #7341F1; */
+   --theme-color-2: #089404;
   --theme-color-3: #FED91F;
   --theme-color-4: #E3FFCD;
   --theme-color-5: #F16615;
@@ -59,6 +62,7 @@
   --gray-color-2: #ECF1F5;
   --heading-font: "Sora", sans-serif;
   --body-font: "DM Sans", sans-serif;
+   --primary-color: #089404;
 }
 
 /*--------------------------------------------------------------
@@ -3758,6 +3762,8 @@ hr {
 /*--------------------------------------------------------------
   11. Sidebar
 ----------------------------------------------------------------*/
+
+
 .cs_sidebar.cs_style_1 {
   padding-left: 42px;
   position: sticky;
